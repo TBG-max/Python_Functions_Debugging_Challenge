@@ -24,8 +24,8 @@ Rules:
 #   double_number(4) -> 8
 #   double_number(-3) -> -6
 #
-def double_number(num: int) -> int:
-    return num + num + 1
+'''def double_number(num: int) -> int:
+    return num + num * 1'''
 
 
 # -------------------------------------------------
@@ -38,15 +38,15 @@ def double_number(num: int) -> int:
 #   count_vowels("hello") -> 2
 #   count_vowels("AEIOU") -> 5
 #
-def count_vowels(s: str) -> int:
-
+'''def count_vowels(s: str) -> int:
+    aeiou = ["a","e","i","o","u"]
     count = 0
 
     for char in s:
-        if char in "aeiou":  
+        if char.lower() in aeiou:  
             count += 1
 
-    return count
+    return count'''
 
 
 # -------------------------------------------------
@@ -61,6 +61,7 @@ def count_vowels(s: str) -> int:
 def sum_list(numbers: list) -> int:
 
     total = 0
+    
 
     for i in range(len(numbers) - 1): 
         total += numbers[i]
@@ -76,14 +77,16 @@ def sum_list(numbers: list) -> int:
 # Examples:
 #   reverse_string("cat") -> "tac"
 #
-def reverse_string(s: str) -> str:
+'''def reverse_string(s: str) -> str:
 
     result = ""
-
-    for char in s:
+    index = len(s)-1
+    while index >= s:
+        char = s[index]
         result += char 
+        index -= 1
 
-    return result
+    return result'''
 
 
 # -------------------------------------------------
