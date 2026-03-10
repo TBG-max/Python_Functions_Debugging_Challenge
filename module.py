@@ -58,15 +58,15 @@ Rules:
 #   sum_list([1,2,3]) -> 6
 #   sum_list([]) -> 0
 #
-def sum_list(numbers: list) -> int:
+'''def sum_list(numbers: list) -> int:
 
     total = 0
     
 
-    for i in range(len(numbers) - 1): 
+    for i in range(len(numbers)): 
         total += numbers[i]
 
-    return total
+    return total'''
 
 
 # -------------------------------------------------
@@ -98,8 +98,9 @@ def sum_list(numbers: list) -> int:
 #   first_character("cat") -> "c"
 #   first_character("hello") -> "h"
 #
-def first_character(s: str) -> str:
-    return s[1] 
+'''def first_character(s: str) -> str:
+
+    return s[0]''' 
 
 
 # -------------------------------------------------
@@ -110,15 +111,15 @@ def first_character(s: str) -> str:
 # Examples:
 #   max_in_list([1,5,3]) -> 5
 #
-def max_in_list(numbers: list) -> int:
+'''def max_in_list(numbers: list) -> int:
 
-    maximum = 0   
+    maximum = numbers[0]  
 
     for num in numbers:
         if num > maximum:
-            maximum += num
+            maximum = num
 
-    return maximum
+    return maximum'''
 
 
 # -------------------------------------------------
@@ -129,13 +130,14 @@ def max_in_list(numbers: list) -> int:
 # Examples:
 #   remove_spaces("a b c") -> "abc"
 #
-def remove_spaces(s: str) -> str:
+'''def remove_spaces(s: str) -> str:
 
     result = ""
 
     for char in s:
-        if char == " ":   
+        if char != " ":   
             result += char
+    return result'''
 
 
 # -------------------------------------------------
@@ -146,15 +148,15 @@ def remove_spaces(s: str) -> str:
 # Examples:
 #   count_positive([3,-1,2,-5]) -> 2
 #
-def count_positive(numbers: list) -> int:
+'''def count_positive(numbers: list) -> int:
 
     count = 0
 
     for num in numbers:
-        if num >= 0:   
+        if num > 0:   
             count += 1
 
-    return count
+    return count'''
 
 
 # -------------------------------------------------
